@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- =================== HEAD SETUP =================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Landing Page</title>
+
+    <!-- ========== BOOTSTRAP CSS ========== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ========== CUSTOM STYLES ========== -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      
+      <!-- ========== HEADER / NAVBAR ========== -->
+      <header class="navbar-header">
+        <!-- Menu Icon -->
+        <div class="menu_icon" id="menuIcon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            width="64px"
+            height="64px"
+          >
+            <path
+              d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"
+            />
+          </svg>
+        </div>
+  
+        <div class="navbar-container" id="navbarContainer">
+          <nav id="primary-navigation" class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#gems" class="nav__link">GEMS</a>
+              </li>
+              <li class="nav__item">
+                <a href="#work" class="nav__link">WORK</a>
+              </li>
+              <li class="nav__item">
+                <a href="#letters" class="nav__link">LETTERS</a>
+              </li>
+              <li class="nav__item">
+                <a href="#profile" class="nav__link">PROFILE</a>
+              </li>
+              <li class="nav__item">
+                <a href="#workflow" class="nav__link">WORKFLOW</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">CONTACT</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ========== MAIN CONTENT ========== -->
+      <main class="main-content">
+
+        <!-- ========== HERO / LOGO SECTION ========== -->
+        <section class="section-logo">
+          <img class="logo" src="assets/images/logo.svg" alt="Your Brand Logo" />
+          <img class="crystal" src="assets/images/gem-textured.png" alt="Textured Gem" />
+        </section>
+
+        <!-- ========== GEMS SECTION ========== -->
+        <section id="gems" class="section-content section-gems">
+          <div class="section-headline">
+            <h1>GEMS</h1>
+          </div>
+
+          <!-- Icons & Labels -->
+          <div class="icon-list-container">
+            <ul>
+              <li>
+                <img src="assets/svg/icon-leaf.svg" alt="Leaf Icon" />
+                <h5>Product Design</h5>
+              </li>
+              <li>
+                <img src="assets/svg/icon-waves.svg" alt="Waves Icon" />
+                <h5>UX Design</h5>
+              </li>
+              <li>
+                <img src="assets/svg/icon-wind.svg" alt="Wind Icon" />
+                <h5>Prototyping</h5>
+              </li>
+              <li>
+                <img src="assets/svg/icon-mountain.svg" alt="Mountain Icon" />
+                <h5>Development</h5>
+              </li>
+              <li>
+                <img src="assets/svg/icon-fether.svg" alt="Feather Icon" />
+                <h5>Team Lead</h5>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Intro Text Block -->
+          <div class="text-container space">
+            <div class="headline_h3">
+              <h3>
+                Hello, I’m Roland,<br />
+                Creative Technologist & User Experience Engineer based in Berlin –<br />
+                I create digital products with knowledge and passion.
+              </h3>
+            </div>
+            <div class="description">
+              <p>
+                With more than a decade of experience I tackle a broad variety
+                of disciplines in the process of creating meaningful products
+                that make a real difference. With carefully selected tools and
+                skills I express my visions ranging from product design to the
+                creation of user experience up to development and delivery.
+              </p>
+              <p>
+                My distinctive strategic thinking helps me to pinpoint the
+                holistic scope of a product and evolve it by adding new
+                business ideas, innovations and values that meet user needs as
+                well as business objectives. Besides building user flows,
+                information architecture and wireframes, tailor-made
+                interactive prototypes are constantly putting concepts and
+                ideas to the test and emphasize the user-centered approach in
+                my work. I work with the latest techniques in web development
+                and my agile workflow is the result of the precisely combined
+                tools and strategies that include object oriented patterns,
+                build scripts, pre-processors and minification, source code
+                management, testing as well as deployment.
+              </p>
+              <p>
+                With my knowledge in both design and technology I foster
+                productive teams in an collaborative environment that meets the
+                requirements of creatives and developers at the same time.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== WORK SECTION ========== -->
+        <section id="work" class="section-work">
+          <div class="section-headline">
+            <h1>WORK</h1>
+          </div>
+          <div class="work-list-container space">
+            <ul>
+              <div class="ul_divider divider-1">
+                <div class="work-list-wrap">
+                  <li>
+                    Expedia Meeting Market
+                    <span class="subtext">Onboarding</span>
+                  </li>
+                  <li>
+                    Atomic
+                    <span class="subtext">Relaunch</span>
+                  </li>
+                  <li>
+                    Melanie Daveid
+                    <span class="subtext">Portfolio</span>
+                  </li>
+                  <li>
+                    Austria Summer Moments
+                    <span class="subtext">Global Campaign</span>
+                  </li>
+                </div>
+              </div>
+              <div class="ul_divider divider-2">
+                <div class="work-list-wrap">
+                  <li>
+                    Row Low
+                    <span class="subtext">Frontend Framework</span>
+                  </li>
+                  <li>
+                    Digging in the Crates
+                    <span class="subtext">Interactive Installation</span>
+                  </li>
+                  <li>
+                    Infinity Car Configurator
+                    <span class="subtext">Proof of Concept</span>
+                  </li>
+                  <li>
+                    Web Fundamentals
+                    <span class="subtext">Field Guide</span>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ========== LETTERS SECTION ========== -->
+        <section id="letters" class="section-letters">
+          <div class="section-headline">
+            <h1>LETTERS</h1>
+          </div>
+          <div class="container">
+            <div class="letters-list-container">
+              <!-- Top block with numbers & heading -->
+              <div class="upper" style="margin: 0 20px">
+                <div class="upper_wrapper">
+                  <div class="content_numbers_top">99</div>
+                  <h6 class="content_tag" style="color: #87c6bd">
+                    Creative <br />
+                    management
+                  </h6>
+                  <h1>
+                    LET ME <br class="br_visible" />
+                    BE <br class="br_visible-l" />
+                    YOUR <br class="br_visible" />
+                    RUBBER <br class="br_visible-l" />
+                    <br class="br_visible" />
+                    DUCK
+                  </h1>
+                  <div class="content_numbers_bottom">66</div>
+                </div>
+              </div>
+
+              <!-- Lower articles with brief descriptions -->
+              <div class="lower space">
+                <div class="row">
+                  <div class="letter_content">
+                    <h6 class="letter_tag">Workflow management</h6>
+                    <h3 class="letter_headline">Developers ain't slow</h3>
+                    <p>
+                      Finding themselves at the end of the production chain,
+                      developers tend to turn into slow and frustrated beasts.
+                    </p>
+                    <h6 class="read-more">- Read</h6>
+                  </div>
+                  <div class="letter_content">
+                    <h6 class="letter_tag">UX Design / Prototype</h6>
+                    <h3 class="letter_headline">
+                      A two level menu approach for mobile
+                    </h3>
+                    <p>
+                      Recently I've worked on a pretty complexe information
+                      architecture. Tryout a prototype I've created for the
+                      mobile version of the menu.
+                    </p>
+                    <h6 class="read-more">- Read</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="letter_content">
+                    <h6 class="letter_tag">UX Design / Prototype</h6>
+                    <h3 class="letter_headline">
+                      Pull-to-Return – A new interaction pattern?
+                    </h3>
+                    <p>
+                      Recently I stumbled upon feedly’s design rework and I’ve
+                      found a pretty neat interaction I’d love to share with you
+                      as a prototype
+                    </p>
+                    <h6 class="read-more">- Read</h6>
+                  </div>
+                  <div class="letter_content">
+                    <h6 class="letter_tag">UX Design / Development</h6>
+                    <h3 class="letter_headline">
+                      Unveiled-Sticky-Navigation – Released as a jQuery Plugin
+                    </h3>
+                    <p>
+                      The navigation of medium.com examined, enhanced and
+                      published as a jQuery plugin
+                    </p>
+                    <h6 class="read-more">- Read</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== PROFILE SECTION ========== -->
+        <section id="profile" class="section-profile">
+          <div class="section-headline">
+            <h1>PROFILE</h1>
+          </div>
+          <div class="profile_text">
+            <p>
+              During my studies of Multimedia at the University of Applied
+              Sciences in Augsburg, Germany, I adopted a greater sense for the
+              correlation of design and technology and ever since I create
+              digital products with knowledge and care.
+            </p>
+          </div>
+        </section>
+
+        <!-- ========== WORKFLOW SECTION ========== -->
+        <section id="workflow" class="section-workflow">
+          <div class="section-headline">
+            <h1>WORKFLOW</h1>
+          </div>
+          <!-- Headline & Workflow Graphics -->
+          <img
+            src="./assets/images/workflow-headline.svg"
+            alt=""
+            class="headline_img"
+          />
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="assets/images/workflow-horizontal.svg"
+            />
+            <img
+              class="workflow_img"
+              src="assets/images/workflow-vertical.svg"
+              id="workflowimg"
+              alt="Workflow Diagram"
+            />
+          </picture>
+        </section>
+
+        <!-- ========== CONTACT SECTION ========== -->
+        <section id="contact" class="section-contacts">
+          <div class="section-headline">
+            <h1>CONTACT</h1>
+          </div>
+          <div>
+            <!-- Email -->
+            <div>
+              <h3 class="email-data">
+                <a class="email" href="#">info@weaintplastic.com</a>
+              </h3>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="contacts-list">
+              <ul class="contacts">
+                <li>
+                  <a href="#"
+                    ><img src="./assets/images/logo-codepen.svg" alt="CodePen"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/images/logo-github.svg" alt="GitHub"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/images/logo-linkedin.svg" alt="LinkedIn"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/images/logo-medium.svg" alt="Medium"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/images/logo-twitter.svg" alt="Twitter"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/images/logo-xing.svg" alt="Xing"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Imprint -->
+            <div>
+              <p class="imprint">
+                <a href="#">Imprint</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ========== FOOTER (OPTIONAL) ========== -->
+      <footer class="site-footer">
+        <!-- Footer Content (if any) -->
+      </footer>
+    </div>
+
+    <!-- =================== JS SCRIPTS =================== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

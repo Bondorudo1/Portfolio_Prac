@@ -1,0 +1,672 @@
+@font-face {
+  font-family: "Oak Bold"; /* The name you'll use in CSS */
+  src: url("../assets/fonts/oak-bold.ttf") format("truetype");
+  /* format('truetype') helps some browsers know how to handle it */
+
+  /* Optional (but recommended) descriptors */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oak Light"; /* The name you'll use in CSS */
+  src: url("../assets/fonts/oak-light.ttf") format("truetype");
+  /* format('truetype') helps some browsers know how to handle it */
+
+  /* Optional (but recommended) descriptors */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Plantin Light"; /* The name you'll use in CSS */
+  src: url("../assets/fonts/plantin-light.ttf") format("truetype");
+  /* format('truetype') helps some browsers know how to handle it */
+
+  /* Optional (but recommended) descriptors */
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  /* ------------------------------- */
+  /*  Colors                        */
+  /* ------------------------------- */
+  --color-black: #1d1d1f;
+  --color-white: #ffffff;
+  --color-grey-lighter: #f3f3f3;
+  --color-grey-light: #9b9ba3;
+  --color-celeste: #87c6bd;
+
+  /* ------------------------------- */
+  /*  Font Families                  */
+  /* ------------------------------- */
+  --font-sans-light: "Oak Light", sans-serif;
+  --font-sans-bold: "Oak Bold", sans-serif;
+  --font-serif: "Plantin Light", serif;
+
+  /* ------------------------------- */
+  /*  Font Sizing (assuming 16px base)  */
+  /* ------------------------------- */
+  --font-size-base: 1rem; /* ~16px */
+  --font-size-small: 0.875rem; /* ~14px */
+  --font-size-h1: 2.5rem; /* ~40px at base */
+  --font-size-h2: 1.8rem; /* ~32px */
+  --font-size-h3: 1.4rem; /* ~24px */
+  --font-size-h5: 0.875rem; /* ~24px */
+  --font-size-h4:1.25rem;
+
+  /* ------------------------------- */
+  /*  Line Heights & Letter Spacing */
+  /* ------------------------------- */
+  --line-height-body: 1.85em;
+  --line-height-heading: 1.5em;
+  /* You can also store letter-spacing if needed */
+  --letter-spacing-default: 0.05em;
+  --letter-spacing-wide: 0.15em;
+  --letter-spacing-headline: 0.3em;
+  /* ------------------------------- */
+  /*  Spacing Scale (in rem for convenience) */
+  /* ------------------------------- */
+  --space-xxs: 0.15rem; /* 3px */
+  --space-xs: 0.5rem; /* 8px */
+  --space-s: 1rem; /* 16px */
+  --space-m: 1.5rem; /* 24px */
+  --space-l: 2rem; /* 32px */
+  --space-xl: 3rem; /* 48px */
+  --space-xxl: 4rem; /* 64px */
+
+  /* ------------------------------- */
+  /*  Transition / Animation Timings */
+  /* ------------------------------- */
+  --transition-default: 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  --transition-fast: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  --transition-slow: 1s cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* ------------------------------- */
+  /*  (Optional) Common Breakpoints  */
+  /* ------------------------------- */
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 992px;
+  --breakpoint-lg: 1200px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-serif);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-black);
+  background-color: var(--color-grey-lighter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-heading);
+
+}
+h5 {
+  font-family: var(--font-sans-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-indent: var(--letter-spacing-wide);
+
+  font-weight: 700;
+  font-size: var(--font-size-h5);
+}
+/* -------------------------------
+   1. Header Styling
+-------------------------------- */
+.site-header {
+  background-color: var(--color-white);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: rgba(135, 135, 135, 0.08) 0px 4px 12px;
+  display: none;
+}
+
+.container {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: none; /* Hidden by default for mobile */
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  padding: 1.6rem;
+  gap: var(--space-m);
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--color-black);
+  font-family: var(--font-sans-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  font-size: var(--font-size-small);
+  transition: color var(--transition-fast);
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--color-celeste);
+}
+
+/* CTA Link Styling */
+.nav__link--cta {
+  background-color: var(--color-celeste);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color var(--transition-fast);
+}
+
+.nav__link--cta:hover,
+.nav__link--cta:focus {
+  background-color: darken(var(--color-celeste), 10%);
+}
+
+/* Hamburger Menu Styling */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  padding: 0;
+}
+
+.nav-toggle:focus {
+  outline: 2px solid var(--color-celeste);
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-black);
+  border-radius: 2px;
+  transition: transform var(--transition-fast) ease-in-out,
+    opacity var(--transition-fast) ease-in-out;
+}
+
+/* Active State for Hamburger */
+.nav-toggle.active .hamburger span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle.active .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .hamburger span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Active State for Navigation */
+.nav.active {
+  display: block;
+  max-height: 500px; /* Adjust based on content */
+  opacity: 1;
+  transition: max-height var(--transition-fast) ease-in-out,
+    opacity var(--transition-fast) ease-in-out;
+}
+
+.section-logo {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section-logo .logo {
+  transform: translate(0, 120%);
+  width: 220px;
+  min-width: 220px;
+  transition: 1s cubic-bezier(0.77, 0, 0.175, 1) 0.2s;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-white);
+
+}
+
+.section-gems {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.crystal {
+  position: absolute;
+  bottom: -173px;
+  width: 250px;
+  min-width: 250px;
+  z-index: 10;
+}
+.section-content::before {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  left: 10px;
+  scroll-snap-stop: always;
+  left: -75px;
+  width: 110%;
+  height: 25%;
+  z-index: -1;
+  transform: rotate(-5deg);
+  background-color: var(--color-white);
+  display: none;
+}
+
+.section-headline {
+  text-align: center;
+  position: relative;
+  font-family: var(--font-sans-bold);
+  padding-top: var(--space-s);
+  font-size: var(--font-size-h2);
+  letter-spacing: var(--letter-spacing-headline);
+  text-indent: var(--letter-spacing-headline);
+}
+.section-headline::after {
+  margin: 50px auto;
+  content: "";
+  display: block;
+  width: 100px;
+  background: #1d1d1f;
+  height: 4px;
+}
+.section-headline h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* List styling */
+.icon-list-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 1rem; /* Space between icons */
+  align-items: center; /* Center icons horizontally */
+}
+
+.icon-list-container ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.icon-list-container h5 {
+  margin-top: var(--space-m);
+}
+
+.icon-list-container img {
+  height: 54px;
+}
+.space{
+  margin: 30px;
+}
+.headline_h3{
+  margin-bottom: 30px;
+}
+.text-container .description{
+  color: var(--color-grey-light);
+  font-size: var(--font-size-base);
+
+}
+.work-list-container{
+  font-family: var(--font-sans-bold);
+  font-size: var(--font-size-h4);
+  margin-top: 70px;
+  
+}
+.work-list-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+}
+
+.work-list-container li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center; 
+  padding: 10px;
+  max-width: 300px;
+  word-wrap: break-word; 
+}
+
+.work-list-container li span{
+  font-size: 0.75rem;
+  color: var(--color-celeste);
+}
+
+
+.section-letters{
+  
+}
+/* -------------------------------
+    2. Desktop Styles
+ -------------------------------- */
+@media (min-width: 768px) {
+  .section-logo .logo {
+    transform: translateY(45%);
+  }
+
+  .nav {
+    display: block !important;
+    position: static;
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: var(--space-m);
+  }
+
+  .nav-toggle {
+    display: none; /* Hide toggle on desktop */
+  }
+}
+
+@media (min-width: 992px) {
+  .section-logo .logo {
+    transform: translateY(45%);
+  }
+
+}
+@media (min-width: 1200px) {
+}
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <button
+          class="nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <nav id="primary-navigation" class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#gems" class="nav__link">GEMS</a>
+            </li>
+            <li class="nav__item">
+              <a href="#pricing" class="nav__link">WORK</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">LETTERS</a>
+            </li>
+            <li class="nav__item">
+              <a href="#signup" class="nav__link">PROFILE</a>
+            </li>
+            <li class="nav__item">
+              <a href="#signup" class="nav__link">WORKFLOW</a>
+            </li>
+            <li class="nav__item">
+              <a href="#signup" class="nav__link">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+      <section class="section-logo">
+        <!-- Logo -->
+        <img
+          class="logo"
+          src="/landing-page/assets/images/logo.svg"
+          alt="Your Brand Logo"
+        />
+      </section>
+
+        <section class="section-content">
+            <div class="section-gems">
+                <img class="crystal" src="./assets/images/gem-textured.png" alt="">
+                <div class="section-headline">
+                    <h1>GEMS</h1>
+            </div>
+            <div class="icon-list-container"> 
+              <ul>
+                <li>
+                   <img src="./assets/svg/icon-leaf.svg" alt="">
+                   <h5>Product Design</h5>
+                </li>
+                <li>
+                   <img src="./assets/svg/icon-waves.svg" alt="">
+                   <h5>UX Design</h5>
+                </li>
+                <li>
+                   <img src="./assets/svg/icon-wind.svg" alt="">
+                   <h5>Prototyping</h5>
+                </li>
+                <li>
+                   <img src="./assets/svg/icon-mountain.svg" alt="">
+                   <h5>Development</h5>
+                </li>
+                <li>
+                   <img src="./assets/svg/icon-fether.svg" alt="">
+                   <h5>Team Lead</h5>
+                </li>
+             </ul>
+               </div>
+            <div class="text-container space">
+              <div class="headline_h3"><h3>
+                Hello, I’m Roland,<br>
+              	Creative Technologist & User Experience Engineer based in Berlin – I create digital products with knowledge and passion.
+				    </h3></div>
+            <div class="description">
+              <p>
+              With more than a decade of experience I tackle a broad variety of disciplines in the process of creating meaningful products that make a real difference. With carefully selected tools and skills I express my visions ranging from product design to the creation of user experience up to development and delivery.
+            </p>
+            <p>
+              My distinctive strategic thinking helps me to pinpoint the holistic scope of a product and evolve it by adding new business ideas, innovations and values that meet user needs as well as business objectives. Besides building user flows, information architecture and wireframes, tailor-made interactive prototypes are constantly putting concepts and ideas to the test and emphasize the user-centered approach in my work. I work with the latest techniques in web development and my agile workflow is the result of the precisely combined tools and strategies that include object oriented patterns, build scripts, pre-processors and minification, source code management, testing as well as deployment.
+            </p>
+            <p>
+              With my knowledge in both design and technology I foster productive teams in an collaborative environment that meets the requirements of creatives and developers at the same time.
+            </p></div>
+            </div>   
+        </section>
+        <section class="section-work">   
+          <div class="section-headline">
+   <h1>WORK</h1>
+</div>
+<div class="work-list-container space">
+  <ul>
+    <li>Expedia Meeting Market<span class="subtext">Onboarding</span></li>
+    <li>Atomic<span class="subtext">Relaunch</span></li>
+    <li>Melanie Daveid<span class="subtext">Portfolio</span></li>
+    <li>Austria Summer Moments<span class="subtext">Global Compagn Website</span></li>
+    <li>Row Low<span class="subtext">Frontend Framework</span></li>
+    <li>Digging in the Crates<span class="subtext">Interactive Installation</span></li>
+    <li>Infinity Car Configurator<span class="subtext">Proof of Concept</span></li>
+    <li>Web Fundamentals<span class="subtext">Field Guide</span></li>
+  </ul>
+</div>
+</section>
+<section class="section-letters">   
+  <div class="section-headline">
+<h1>LETTERS</h1>
+</div>
+<div class="work-list-container space">
+
+</div>
+</section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <!-- Footer Content -->
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your JavaScript -->
+    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+    <header class="site-header">
+      <div class="container">
+        <!-- Mobile Hamburger -->
+        <button
+          class="nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <!-- Main Nav -->
+        <nav id="primary-navigation" class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#gems" class="nav__link">GEMS</a>
+            </li>
+            <li class="nav__item">
+              <a href="#work" class="nav__link">WORK</a>
+            </li>
+            <li class="nav__item">
+              <a href="#letters" class="nav__link">LETTERS</a>
+            </li>
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">PROFILE</a>
+            </li>
+            <li class="nav__item">
+              <a href="#workflow" class="nav__link">WORKFLOW</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="page-wrapper">
+      <!-- =================== HEADER SECTION =================== -->
+      <div class="navbar-container">
+        <header class="site-header">
+          <div class="nav-wrapper">
+            <!-- Navigation wrapper for centering -->
+
+            <nav id="primary-navigation" class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#gems" class="nav__link">GEMS</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#work" class="nav__link">WORK</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#letters" class="nav__link">LETTERS</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#profile" class="nav__link">PROFILE</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#workflow" class="nav__link">WORKFLOW</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contact" class="nav__link">CONTACT</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Menu Icon (Hamburger) -->
+          </div>
+        </header>
+
+      </div>

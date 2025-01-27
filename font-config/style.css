@@ -1,0 +1,56 @@
+body{
+   background-color: #F3F3F3;
+   width: 100%;
+   height: 100vh;
+   justify-items: center;
+   align-content: center;
+}
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+#logo path:nth-child(1){
+   stroke-dasharray: 380px;
+
+}
+
+#logo path:nth-child(1){
+   fill: transparent; /* Start as transparent */
+   stroke: black;     /* Optional, add an outline to make it visible during animation */
+   animation: fillColor 2s ease-in-out forwards;
+ }
+ 
+ @keyframes fillColor {
+   0% {
+     fill: transparent; /* Starts as transparent */
+   }
+   100% {
+     fill: #FF5733; /* Ends with the desired color */
+   }
+ }
+ 
+#logo path:nth-child(2){
+   
+}
+#logo path:nth-child(3){
+   
+}
+#logo path:nth-child(4){
+   
+}
+#logo path:nth-child(5){
+   
+}
+#logo path:nth-child(6){
+   
+}
+#logo path:nth-child(7){
+   
+}
+/* Vector */
+
+.circle #Ellipse2{
+   stroke-dasharray: 2px;
+}
