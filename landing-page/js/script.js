@@ -41,4 +41,10 @@ menuIcon.addEventListener('click', () => {
   }
 });
 
-
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) { // Ensure this only applies to mobile
+      navbarContainer.classList.remove('open');
+    }
+  });
+});
